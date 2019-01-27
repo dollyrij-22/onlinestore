@@ -4,7 +4,6 @@ from rest_framework.parsers import JSONParser
 from store.Class.Store import Store
 from rest_framework.decorators import api_view
 
-
 @api_view(['POST'])
 def create_store(request):
     try:
