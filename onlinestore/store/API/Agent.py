@@ -19,5 +19,14 @@ def create_agent(request):
         Agent.create_agent(name,contact)
 
         return JsonResponse({}, status=200)
-    except Exception:
+    except:
         return JsonResponse('Can not create agent.', safe=False, status=500)
+
+@api_view(['GET'])
+def list_orders(request):
+    try:
+        print(request)
+
+        return JsonResponse({},status=200)
+    except:
+        return JsonResponse('Can not send list of orders belongs to agent',safe=False,status=200)
